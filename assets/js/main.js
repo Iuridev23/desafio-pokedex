@@ -21,7 +21,14 @@ function convertPokemonToLi(pokemon) {
                     alt="${pokemon.name}">                
             </div>
             <div class="pokemon-details">
-                    <details></details>
+                    <details>
+                        <summary>About</summary>
+                        <ul>
+                            <li>Height: ${pokemon.height}</li>
+                            <li>Weight: ${pokemon.weight}</li>
+                            <li>Abilities: ${pokemon.abilities.map((ability) => `${ability}`).join(', ')}</li>
+                        </ul>
+                    </details>
             </div>
         </li>        
     `
